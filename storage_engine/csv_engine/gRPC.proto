@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package storage_engine;
+
+// --- Core Data Entities ---
+
+message TupleID {
+  uint32 page_id = 1;
+  uint32 slot_offset = 2; // Matches uint16_t in C
+}
+
+message Tuple {
+  string data = 1; // The CSV line
+}
+
+enum ComparisonOp {
+  OP_EQ = 0;
+  OP_GT = 1;
+  OP_GTE = 2;
+  OP_LT = 3;
+  OP_LTE = 4;
+}
+
+enum IsolationLevel {
+  READ_UNCOMMITTED = 0;
+  READ_COMMITTED = 1;
+  REPEATABLE_READ = 2;
+  SERIALIZABLE = 3;
+}
+
+message Predicate {
+  int32 column_index = 1;
+  ComparisonOp op = 2;
+  string value = 3;
+}
+
+// --- Service Definitions ---
+
+service StorageService {
+  // Transaction Management
+  rpc BeginTransaction(BeginRequest) returns (TransactionHandle);
+  rpc CommitTransaction(TransactionHandle) returns (StatusResponse);
+  rpc RollbackTransaction(TransactionHandle) returns (StatusResponse);
+
+  // Data Access (CRUD)
+  // We use "stream" for scanning to handle large datasets efficiently
+  rpc Scan(ScanRequest) returns (stream TupleResponse);
+  
+  rpc Insert(InsertRequest) returns (InsertResponse);
+  rpc Update(UpdateRequest) returns (StatusResponse);
+  rpc Delete(DeleteRequest) returns (StatusResponse);
+  
+  rpc CreateTable(CreateTableRequest) returns (TableResponse);
+}
+
+// --- Request/Response Messages ---
+
+message BeginRequest {
+  IsolationLevel level = 1;
+}
+
+message TransactionHandle {
+  uint64 txn_id = 1; // Map this to the Transaction* on the server side
+}
+
+message ScanRequest {
+  TransactionHandle txn = 1;
+  uint32 table_id = 2;
+  Predicate predicate = 3;
+}
+
+message TupleResponse {
+  Tuple tuple = 1;
+  TupleID tid = 2;
+}
+
+message InsertRequest {
+  TransactionHandle txn = 1;
+  uint32 table_id = 2;
+  Tuple tuple = 3;
+}
+
+message InsertResponse {
+  int32 status = 1;
+  TupleID tid = 2;
+}
+
+message UpdateRequest {
+  TransactionHandle txn = 1;
+  TupleID tid = 2;
+  Tuple new_tuple = 3;
+}
+
+message DeleteRequest {
+  TransactionHandle txn = 1;
+  TupleID tid = 2;
+}
+
+message CreateTableRequest {
+  string table_name = 1;
+  repeated string column_names = 2;
+}
+
+message TableResponse {
+  uint32 table_id = 1;
+}
+
+message StatusResponse {
+  int32 status = 1; // 0 for success, non-zero for error
+}
