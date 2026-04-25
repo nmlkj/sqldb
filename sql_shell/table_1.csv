@@ -1,0 +1,11 @@
+0,0,table_id,INT
+0,1,table_name,TEXT
+1,0,table_id,INT
+1,1,col_idx,INT
+1,2,col_name,TEXT
+1,3,data_type,TEXT
+2,0,user_id,INT
+2,1,user_name,TEXT
+2,2,department,TEXT
+3,0,id,TEXT
+3,1,name,TEXT

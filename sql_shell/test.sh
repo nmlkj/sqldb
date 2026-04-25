@@ -1,0 +1,1 @@
+echo "select * from all_columns where table_id=0;" | ./sql_shell > crash_report.txt

@@ -1,0 +1,70 @@
+{
+  "sql_server_architecture": {
+    "metadata": {
+      "version": "1.0",
+      "description": "High-level architecture of a Relational Database Management System (RDBMS)"
+    },
+    "layers": [
+      {
+        "layer_name": "External Interface / Connection Pooler",
+        "components": [
+          {
+            "name": "Protocol Layer",
+            "function": "Handles TCP/IP, Shared Memory, or Named Pipes connections from clients."
+          },
+          {
+            "name": "Connection Manager",
+            "function": "Manages session limits, authentication, and security audits."
+          }
+        ]
+      },
+      {
+        "layer_name": "Query Processor (Relational Engine)",
+        "components": [
+          {
+            "name": "Parser",
+            "function": "Checks SQL syntax and translates it into a relational algebra tree."
+          },
+          {
+            "name": "Optimizer",
+            "function": "Evaluates execution paths and selects the lowest-cost plan based on statistics."
+          },
+          {
+            "name": "Query Executor",
+            "function": "Runs the selected execution plan and interacts with the storage engine."
+          }
+        ]
+      },
+      {
+        "layer_name": "Storage Engine",
+        "components": [
+          {
+            "name": "Transaction Manager",
+            "function": "Ensures ACID compliance (Atomicity, Consistency, Isolation, Durability) via locking and logging."
+          },
+          {
+            "name": "Buffer Manager",
+            "function": "Caches data pages in RAM to reduce disk I/O (Buffer Pool)."
+          },
+          {
+            "name": "Lock Manager",
+            "function": "Controls concurrent access to data rows, pages, or tables."
+          }
+        ]
+      },
+      {
+        "layer_name": "Physical Storage Layer",
+        "components": [
+          {
+            "name": "Data Files (.mdf / .dbf)",
+            "function": "The actual physical pages containing table and index data."
+          },
+          {
+            "name": "Transaction Logs (.ldf / .log)",
+            "function": "Sequential records of all changes made to the database for recovery purposes."
+          }
+        ]
+      }
+    ]
+  }
+}

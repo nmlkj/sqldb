@@ -1,0 +1,91 @@
+<sql_script>      ::= <statement> ";" [ <sql_script> ]
+
+<statement>       ::= <select_stmt>
+                    | <insert_stmt>
+                    | <update_stmt>
+                    | <delete_stmt>
+                    | <create_index_stmt>
+                    | <create_table_stmt>
+                    | <drop_table_stmt>
+
+/* --- Data Definition Statements --- */
+
+<create_table_stmt> ::= "CREATE TABLE" <table_name> "(" <column_definitions> ")"
+
+<drop_table_stmt>   ::= "DROP TABLE" <table_name>
+
+<column_definitions> ::= <column_def> [ "," <column_definitions> ]
+
+<column_def>         ::= <identifier> <data_type> [ <column_constraint> ]
+
+<data_type>          ::= "INT" | "INTEGER" | "TEXT" | "VARCHAR" "(" <numeric_literal> ")" | "REAL" | "BOOLEAN"
+
+<column_constraint>  ::= "PRIMARY KEY" | "NOT NULL" | "UNIQUE"
+
+/* --- Data Manipulation Statements --- */
+
+<select_stmt>     ::= "SELECT" <result_columns> "FROM" <table_name> [ <where_clause> ]
+
+<insert_stmt>     ::= "INSERT INTO" <table_name> "(" <column_list> ")" "VALUES" "(" <expr_list> ")"
+
+<update_stmt>     ::= "UPDATE" <table_name> "SET" <assignment_list> [ <where_clause> ]
+
+<delete_stmt>     ::= "DELETE FROM" <table_name> [ <where_clause> ]
+
+<create_index_stmt> ::= "CREATE INDEX" <index_name> "ON" <table_name> "(" <column_list> ")"
+
+/* --- Clauses and Components --- */
+
+<where_clause>    ::= "WHERE" <boolean_expr>
+
+<result_columns>  ::= "*" | <column_list>
+
+<column_list>     ::= <identifier> [ "," <column_list> ]
+
+<expr_list>       ::= <expression> [ "," <expr_list> ]
+
+<assignment_list> ::= <identifier> "=" <expression> [ "," <assignment_list> ]
+
+/* --- Logic and Predicates --- */
+
+<boolean_expr>    ::= <boolean_term> [ "OR" <boolean_expr> ]
+
+<boolean_term>    ::= <boolean_factor> [ "AND" <boolean_term> ]
+
+<boolean_factor>  ::= "NOT" <boolean_factor>
+                    | "(" <boolean_expr> ")"
+                    | <predicate>
+
+<predicate>       ::= <expression> <comparison_op> <expression>
+
+<comparison_op>   ::= "=" | "<>" | "<" | ">" | "<=" | ">="
+
+/* --- Expressions --- */
+
+<expression>      ::= <term> [ <add_op> <expression> ]
+
+<term>            ::= <factor> [ <mult_op> <term> ]
+
+<factor>          ::= <primary>
+                    | "-" <factor>
+
+<primary>         ::= <literal>
+                    | <identifier>
+                    | "(" <expression> ")"
+
+<add_op>          ::= "+" | "-" | "||"
+
+<mult_op>         ::= "*" | "/"
+
+/* --- Low-Level Tokens --- */
+
+<literal>         ::= <string_literal> | <numeric_literal>
+
+<string_literal>  ::= "'" <characters> "'"
+
+<numeric_literal> ::= <digit> [ <numeric_literal> ]
+
+<identifier>      ::= <letter> [ <alphanumeric_sequence> ]
+
+<table_name>      ::= <identifier>
+<index_name>      ::= <identifier>

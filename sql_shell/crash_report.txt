@@ -1,0 +1,176 @@
+SQL Shell v0.1
+Enter SQL statements ending with ';' or '.help' for commands.
+sql> DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,all_tables] col_idx=1
+DEBUG: OP_COLUMN rd=2 col=1 val=[all_tables]
+DEBUG: COMPARE RESULT=17
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,all_columns] col_idx=1
+DEBUG: OP_COLUMN rd=2 col=1 val=[all_columns]
+DEBUG: COMPARE RESULT=0
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,all_columns] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[1]
+Executing 15 instructions...
+[000] Op:14 Rd:0 Rs1:0 Rs2:0 Imm:0
+[001] Op:15 Rd:1 Rs1:0 Rs2:0 Imm:0
+[002] Op:20 Rd:3 Rs1:0 Rs2:1 Imm:0
+[003] Op:10 Rd:0 Rs1:0 Rs2:0 Imm:0
+[004] Op:1 Rd:8 Rs1:0 Rs2:0 Imm:1
+[005] Op:3 Rd:9 Rs1:8 Rs2:0 Imm:13
+[006] Op:14 Rd:4 Rs1:9 Rs2:0 Imm:0
+[007] Op:14 Rd:5 Rs1:9 Rs2:0 Imm:1
+[008] Op:14 Rd:6 Rs1:9 Rs2:0 Imm:2
+[009] Op:14 Rd:7 Rs1:9 Rs2:0 Imm:3
+[010] Op:22 Rd:4 Rs1:0 Rs2:0 Imm:4
+[011] Op:15 Rd:10 Rs1:0 Rs2:0 Imm:1
+[012] Op:21 Rd:10 Rs1:0 Rs2:0 Imm:5
+[013] Op:4 Rd:8 Rs1:0 Rs2:0 Imm:0
+[014] Op:0 Rd:0 Rs1:0 Rs2:0 Imm:0
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[NULL] col_idx=0
+DEBUG: OP_COLUMN rd=0 col=0 val=[NULL]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,0,table_id,INT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,0,table_id,INT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,0,table_id,INT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[table_id]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,0,table_id,INT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[INT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,1,table_name,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,1,table_name,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,1,table_name,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[table_name]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[0,1,table_name,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,0,table_id,INT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,0,table_id,INT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,0,table_id,INT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[table_id]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,0,table_id,INT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[INT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,1,col_idx,INT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,1,col_idx,INT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,1,col_idx,INT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[col_idx]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,1,col_idx,INT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[INT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,2,col_name,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,2,col_name,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[2]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,2,col_name,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[col_name]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,2,col_name,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,3,data_type,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,3,data_type,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[3]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,3,data_type,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[data_type]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[1,3,data_type,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,0,user_id,INT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[2]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,0,user_id,INT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,0,user_id,INT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[user_id]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,0,user_id,INT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[INT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,1,user_name,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[2]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,1,user_name,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,1,user_name,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[user_name]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,1,user_name,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,2,department,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[2]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,2,department,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[2]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,2,department,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[department]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[2,2,department,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,0,id,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[3]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,0,id,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[0]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,0,id,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[id]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,0,id,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,1,name,TEXT] col_idx=0
+DEBUG: OP_COLUMN rd=4 col=0 val=[3]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,1,name,TEXT] col_idx=1
+DEBUG: OP_COLUMN rd=5 col=1 val=[1]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,1,name,TEXT] col_idx=2
+DEBUG: OP_COLUMN rd=6 col=2 val=[name]
+DEBUG: GetColumnValue ../storage_engine/csv_engine/storage_engine.c:305
+DEBUG: GetColumnValue tuple data=[3,1,name,TEXT] col_idx=3
+DEBUG: OP_COLUMN rd=7 col=3 val=[TEXT]
+| 0               | 0               | 0               | 0               |
+sql> 

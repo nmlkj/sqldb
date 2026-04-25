@@ -1,0 +1,1 @@
+/home/dododot321/sqldb/sql_vm/VM_SPECIFICATION.md
